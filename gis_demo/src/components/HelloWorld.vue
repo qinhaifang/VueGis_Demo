@@ -4,8 +4,9 @@
   </div>
 </template>
 
-<script>
+<script type="text/ecmascript-6">
   import ces from './CesiumExample/No01-init.vue'
+  import {login} from '../api/loginApi'
 export default {
   name: 'HelloWorld',
   components:{
@@ -13,6 +14,20 @@ export default {
   },
   props: {
     msg: String
+  },
+  created(){
+    this.login()
+  },
+  mounted(){
+    this.$initCesium.tabcesium(["fengLiu"]);
+    this.$initCesium.tabcesium(["chuanGanQi"]);
+  },
+  methods:{
+    login(){
+      login('admin','123456').then(response =>{
+        console.log(111,response)
+      })
+    }
   }
 }
 </script>

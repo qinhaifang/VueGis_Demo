@@ -10,6 +10,8 @@
   "dependencies": {
     "cesium": "1.68.0",
     "core-js": "^3.6.5",
+    "echarts": "^4.8.0",
+    "element-ui": "^2.13.2",
     "jquery": "^3.5.1",
     "vue": "^2.6.11"
   },
